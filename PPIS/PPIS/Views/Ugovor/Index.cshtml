@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PPIS.Models.Ugovor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dobavljac.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodVazenjaOd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriodVazenjaDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sadrzajUgovora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.potpisnikUgovoraSupplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.potpisnikUgovoraManager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dodatneStavke)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dobavljac.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodVazenjaOd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriodVazenjaDo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sadrzajUgovora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.potpisnikUgovoraSupplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.potpisnikUgovoraManager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dodatneStavke)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

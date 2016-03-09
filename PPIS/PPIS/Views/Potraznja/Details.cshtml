@@ -1,0 +1,82 @@
+﻿@model PPIS.Models.Potraznja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Potraznja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OcjenaDobavljaca.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OcjenaDobavljaca.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ponuda.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ponuda.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cijena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cijena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrioritetCijene)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrioritetCijene)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RokIsporuke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RokIsporuke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrioritetRokaIsporuke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrioritetRokaIsporuke)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model PPIS.Models.Ugovor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ugovor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dobavljac.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dobavljac.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriodVazenjaOd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriodVazenjaOd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriodVazenjaDo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriodVazenjaDo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sadrzajUgovora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sadrzajUgovora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.potpisnikUgovoraSupplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.potpisnikUgovoraSupplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.potpisnikUgovoraManager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.potpisnikUgovoraManager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dodatneStavke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dodatneStavke)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
