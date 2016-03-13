@@ -11,7 +11,6 @@ namespace PPIS.Models
     public class Potraznja
     {
         public int ID { get; set; }
-        [Display(Name = "Naziv")]
         [Required]
         public string Naziv { get; set; }
         [Display(Name = "Cijena")]

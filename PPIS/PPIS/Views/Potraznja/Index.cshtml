@@ -7,15 +7,12 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Kreiraj", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.OcjenaDobavljaca.ID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Ponuda.Naziv)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Naziv)
@@ -42,9 +39,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.OcjenaDobavljaca.ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ponuda.Naziv)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Naziv)
