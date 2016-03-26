@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using PPIS.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace PPIS.Controllers
 {
@@ -138,7 +139,7 @@ namespace PPIS.Controllers
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
-        {
+        {            
             return View();
         }
 
@@ -151,21 +152,37 @@ namespace PPIS.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, ImeIPrezime = model.ImeIPrezime };
+                               
+                var roleManager = new RoleManager<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+
+                if (!roleManager.RoleExists(model.Role.ToString())) {
+                    var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                    role.Name = model.Role.ToString();
+                    IdentityResult r = await roleManager.CreateAsync(role);                    
+                }
+                
+
                 var result = await UserManager.CreateAsync(user, model.Password);
+
+                var currentUser = UserManager.FindByName(user.UserName);
+                var roleresult = UserManager.AddToRole(currentUser.Id, model.Role.ToString());
+
+
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-                    return RedirectToAction("Index", "Home");
+                    ViewBag.Poruka = "Korisnik je dodan!";
+                    return View(new RegisterViewModel());
                 }
-                AddErrors(result);
+                else AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form

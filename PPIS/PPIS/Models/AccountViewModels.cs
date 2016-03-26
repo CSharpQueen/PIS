@@ -79,6 +79,11 @@ namespace PPIS.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public Role Role { get; set; }
+        [Display(Name = "Ime i prezime")]
+        public string ImeIPrezime { get; set; }
+
     }
 
     public class ResetPasswordViewModel

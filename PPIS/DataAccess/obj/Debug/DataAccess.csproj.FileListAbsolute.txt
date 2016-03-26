@@ -8,3 +8,13 @@ C:\Users\Nermina Agovic\Documents\Visual Studio 2015\Projects\PPIS\DataAccess\bi
 C:\Users\Nermina Agovic\Documents\Visual Studio 2015\Projects\PPIS\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Nermina Agovic\Documents\Visual Studio 2015\Projects\PPIS\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Nermina Agovic\Documents\Visual Studio 2015\Projects\PPIS\DataAccess\obj\Debug\DataAccess.pdb
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\DataAccess.dll.config
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\DataAccess.dll
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\DataAccess.pdb
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\EntityFramework.dll
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\EntityFramework.xml
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\obj\Debug\DataAccess.dll
+C:\OneDrive\GitHub\PIS\PPIS\DataAccess\obj\Debug\DataAccess.pdb

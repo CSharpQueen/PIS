@@ -1,0 +1,122 @@
+﻿@model PPIS.Models.ZahtjevZaPromjenom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ZahtjevZaPromjenom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cab.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cab.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menadzer.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menadzer.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusZahtjevaZaPromjenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusZahtjevaZaPromjenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPodnosenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPodnosenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazivPromjene)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazivPromjene)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisPromjene)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisPromjene)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RokIzvrsenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RokIzvrsenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZahtijevaniPosao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZahtijevaniPosao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanRealizacije)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanRealizacije)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumSvrsetka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumSvrsetka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPrihvatanja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPrihvatanja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Komentar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Komentar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

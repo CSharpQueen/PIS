@@ -1,0 +1,105 @@
+﻿@model IEnumerable<PPIS.Models.ZahtjevZaPromjenom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cab.ImeIPrezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menadzer.ImeIPrezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.ImeIPrezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusZahtjevaZaPromjenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumPodnosenja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivPromjene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisPromjene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RokIzvrsenja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZahtijevaniPosao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanRealizacije)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumSvrsetka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumPrihvatanja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Komentar)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cab.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Menadzer.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusZahtjevaZaPromjenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumPodnosenja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazivPromjene)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisPromjene)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RokIzvrsenja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZahtijevaniPosao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanRealizacije)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumSvrsetka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumPrihvatanja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Komentar)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
