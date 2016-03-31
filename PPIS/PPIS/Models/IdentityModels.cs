@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.ComponentModel.DataAnnotations;
 
 namespace PPIS.Models
 {
@@ -20,7 +21,7 @@ namespace PPIS.Models
             // Add custom user claims here
             return userIdentity;
         }
-        
+        [Display(Name = "Ime i prezime")]
         public string ImeIPrezime { get; set; }        
     }
 

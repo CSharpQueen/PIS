@@ -17,7 +17,8 @@ namespace PPIS.Controllers
         // GET: OcjenaDobavljaca
         public ActionResult Index()
         {
-            return View(db.OcjenaDobavljaca.ToList());
+            var ocjenaDobavljaca = db.OcjenaDobavljaca.Include(o => o.Dobavljac);
+            return View(ocjenaDobavljaca.ToList());
         }
 
         // GET: OcjenaDobavljaca/Details/5
@@ -38,6 +39,7 @@ namespace PPIS.Controllers
         // GET: OcjenaDobavljaca/Create
         public ActionResult Create()
         {
+            ViewBag.DobavljacId = new SelectList(db.Dobavljac, "Id", "Naziv");
             return View();
         }
 
@@ -46,8 +48,18 @@ namespace PPIS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Ocjena")] OcjenaDobavljaca ocjenaDobavljaca)
+        public ActionResult Create([Bind(Include = "ID,DobavljacId,OcjenaCijene,OcjenaRokaIporuke,IspostovaneStavkeUgovora,KvalitetIsporuke,Utisak")] OcjenaDobavljaca ocjenaDobavljaca)
         {
+            int ocjena = ocjenaDobavljaca.OcjenaCijene + ocjenaDobavljaca.OcjenaRokaIporuke + ocjenaDobavljaca.IspostovaneStavkeUgovora + ocjenaDobavljaca.KvalitetIsporuke + ocjenaDobavljaca.Utisak;
+            ocjenaDobavljaca.Ocjena = ocjena;
+
+            if (ocjena >= 35)
+                ocjenaDobavljaca.OpisnaOcjena = "visoka";
+            else if (ocjena < 35 && ocjena > 20)
+                ocjenaDobavljaca.OpisnaOcjena = "srednja";
+            else if (ocjena < 20)
+                ocjenaDobavljaca.OpisnaOcjena = "niska";
+
             if (ModelState.IsValid)
             {
                 db.OcjenaDobavljaca.Add(ocjenaDobavljaca);
@@ -55,6 +67,7 @@ namespace PPIS.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DobavljacId = new SelectList(db.Dobavljac, "Id", "Naziv", ocjenaDobavljaca.DobavljacId);
             return View(ocjenaDobavljaca);
         }
 
@@ -70,6 +83,7 @@ namespace PPIS.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DobavljacId = new SelectList(db.Dobavljac, "Id", "Naziv", ocjenaDobavljaca.DobavljacId);
             return View(ocjenaDobavljaca);
         }
 
@@ -78,7 +92,7 @@ namespace PPIS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Ocjena")] OcjenaDobavljaca ocjenaDobavljaca)
+        public ActionResult Edit([Bind(Include = "ID,DobavljacId,OcjenaCijene,OcjenaRokaIporuke,IspostovaneStavkeUgovora,KvalitetIsporuke,Utisak,Ocjena,OpisnaOcjena")] OcjenaDobavljaca ocjenaDobavljaca)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +100,7 @@ namespace PPIS.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.DobavljacId = new SelectList(db.Dobavljac, "Id", "Naziv", ocjenaDobavljaca.DobavljacId);
             return View(ocjenaDobavljaca);
         }
 

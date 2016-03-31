@@ -11,15 +11,12 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Cab.ImeIPrezime)
-        </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Menadzer.ImeIPrezime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.User.ImeIPrezime)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.StatusZahtjevaZaPromjenom)
         </th>
@@ -42,10 +39,10 @@
             @Html.DisplayNameFor(model => model.PlanRealizacije)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DatumSvrsetka)
+            @Html.DisplayNameFor(model => model.DatumPrihvatanja)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DatumPrihvatanja)
+            @Html.DisplayNameFor(model => model.DatumSvrsetka)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Komentar)
@@ -55,15 +52,12 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cab.Email)
-        </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Menadzer.Email)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.User.Email)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.StatusZahtjevaZaPromjenom)
         </td>
@@ -86,10 +80,10 @@
             @Html.DisplayFor(modelItem => item.PlanRealizacije)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DatumSvrsetka)
+            @Html.DisplayFor(modelItem => item.DatumPrihvatanja)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DatumPrihvatanja)
+            @Html.DisplayFor(modelItem => item.DatumSvrsetka)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Komentar)

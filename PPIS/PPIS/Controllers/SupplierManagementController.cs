@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace PPIS.Controllers
 {
-    public class HomeController : Controller
+    public class SupplierManagementController : Controller
     {
         public ActionResult Index()
         {

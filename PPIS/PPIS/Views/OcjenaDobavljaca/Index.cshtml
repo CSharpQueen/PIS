@@ -12,7 +12,28 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Dobavljac.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OcjenaCijene)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OcjenaRokaIporuke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IspostovaneStavkeUgovora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KvalitetIsporuke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Utisak)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Ocjena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisnaOcjena)
         </th>
         <th></th>
     </tr>
@@ -20,7 +41,28 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Dobavljac.Naziv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OcjenaCijene)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OcjenaRokaIporuke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IspostovaneStavkeUgovora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KvalitetIsporuke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utisak)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Ocjena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisnaOcjena)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
