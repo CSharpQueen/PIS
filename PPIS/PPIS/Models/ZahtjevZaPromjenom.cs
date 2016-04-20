@@ -9,7 +9,9 @@ namespace PPIS.Models {
     public enum StatusZahtjevaZaPromjenom {
         Poslan, Cab, Prihvacen, Odbijen
     }
-     
+
+    public enum ZahtjevZaPromjenomPrioritet { nizak, srednji, visok }
+
     public class ZahtjevZaPromjenom {
 
         public int ID { get; set; }
@@ -41,6 +43,8 @@ namespace PPIS.Models {
         public string PlanRealizacije { get; set; }
         [Display(Name = "Datum završetka")]
         public DateTime? DatumSvrsetka { get; set; }
+        [Display(Name = "Prioritet zahtjeva za promjenom")]
+        public ZahtjevZaPromjenomPrioritet PrioritetZahtjeva { get; set; }
 
         public string CabId { get; set; }
         [ForeignKey("CabId")]
