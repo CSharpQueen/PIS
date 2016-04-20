@@ -15,19 +15,22 @@ namespace PPIS.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ZahtjevZaPromjenom
-        [Authorize(Roles = "Cab,ChangeManager")]
+        [Authorize(Roles = "Cab,ChangeManager,User")]
         public ActionResult Index()
         {
          
             List<ZahtjevZaPromjenom> zahtjevi = db.ZahtjevZaPromjenom.ToList();
 
-            if (User.IsInRole("Cab")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Cab).ToList();
-
+            //if (User.IsInRole("Cab")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Cab).ToList();
+            //z.UserId == db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault().Id)).ToList();
+            if (User.IsInRole("Cab")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Cab).OrderByDescending(z => z.PrioritetZahtjeva).ToList();
+            if (User.IsInRole("ChangeManager")) zahtjevi = db.ZahtjevZaPromjenom.OrderBy(z => z.StatusZahtjevaZaPromjenom).ToList();
+            if (User.IsInRole("User")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => (z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Prihvacen || z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Odbijen)).OrderByDescending(z => z.PrioritetZahtjeva).ToList();
             return View(zahtjevi);
         }
 
         // GET: ZahtjevZaPromjenom/Details/5ž
-        [Authorize(Roles = "Cab,ChangeManager")]
+        [Authorize(Roles = "Cab,ChangeManager,User")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -107,6 +110,7 @@ namespace PPIS.Controllers
         }
 
         // GET: ZahtjevZaPromjenom/Delete/5
+         [Authorize(Roles = "Cab,ChangeManager")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -122,6 +126,7 @@ namespace PPIS.Controllers
         }
 
         // POST: ZahtjevZaPromjenom/Delete/5
+        [Authorize(Roles = "Cab,ChangeManager")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
