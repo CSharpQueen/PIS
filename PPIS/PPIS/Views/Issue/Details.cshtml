@@ -1,0 +1,98 @@
+﻿@model PPIS.Models.Issue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Issue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Event.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemManager.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemManager.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPodnosenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPodnosenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazivProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazivProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrioritetProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrioritetProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Komentar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Komentar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

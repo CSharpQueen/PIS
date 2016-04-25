@@ -1,0 +1,104 @@
+﻿@model PPIS.Models.Issue
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Issue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Event.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemManager.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemManager.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.ImeIPrezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.ImeIPrezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPodnosenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPodnosenja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazivProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazivProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrioritetProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrioritetProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Komentar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Komentar)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

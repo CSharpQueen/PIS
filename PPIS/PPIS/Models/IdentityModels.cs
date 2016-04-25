@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace PPIS.Models
 {
     public enum Role {
-        User, ChangeManager, Cab
+        User, ChangeManager, Cab, Incident,Event,ProblemManager
     }
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -48,5 +48,6 @@ namespace PPIS.Models
         public DbSet<OcjenaDobavljaca> OcjenaDobavljaca { get; set; }
         public DbSet<Certifikat> Certifikat { get; set; }
         public DbSet<ZahtjevZaPromjenom> ZahtjevZaPromjenom { get; set; }
+        public DbSet<Issue>Issue { get; set; }
     }
 }

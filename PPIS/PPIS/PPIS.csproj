@@ -213,25 +213,32 @@
     <Compile Include="Controllers\ChangeManagementController.cs" />
     <Compile Include="Controllers\DobavljacController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IssueController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OcjenaDobavljacaController.cs" />
     <Compile Include="Controllers\PonudaController.cs" />
     <Compile Include="Controllers\PotraznjaController.cs" />
+    <Compile Include="Controllers\ProblemManagementController.cs" />
     <Compile Include="Controllers\SupplierManagementController.cs" />
     <Compile Include="Controllers\UgovorController.cs" />
     <Compile Include="Controllers\ZahtjevZaPromjenomController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604202114421_nn.cs" />
-    <Compile Include="Migrations\201604202114421_nn.Designer.cs">
-      <DependentUpon>201604202114421_nn.cs</DependentUpon>
+    <Compile Include="Migrations\201604251221188_gvg.cs" />
+    <Compile Include="Migrations\201604251221188_gvg.Designer.cs">
+      <DependentUpon>201604251221188_gvg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604252055431_srce.cs" />
+    <Compile Include="Migrations\201604252055431_srce.Designer.cs">
+      <DependentUpon>201604252055431_srce.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Certifikat.cs" />
     <Compile Include="Models\Dobavljac.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Issue.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OcjenaDobavljaca.cs" />
     <Compile Include="Models\Ponuda.cs" />
@@ -340,6 +347,12 @@
     <Content Include="Views\OcjenaDobavljaca\Details.cshtml" />
     <Content Include="Views\OcjenaDobavljaca\Edit.cshtml" />
     <Content Include="Views\OcjenaDobavljaca\Index.cshtml" />
+    <Content Include="Views\ProblemManagement\Index.cshtml" />
+    <Content Include="Views\Issue\Create.cshtml" />
+    <Content Include="Views\Issue\Delete.cshtml" />
+    <Content Include="Views\Issue\Details.cshtml" />
+    <Content Include="Views\Issue\Edit.cshtml" />
+    <Content Include="Views\Issue\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -353,8 +366,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604202114421_nn.resx">
-      <DependentUpon>201604202114421_nn.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604251221188_gvg.resx">
+      <DependentUpon>201604251221188_gvg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604252055431_srce.resx">
+      <DependentUpon>201604252055431_srce.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
