@@ -83,7 +83,7 @@ namespace PPIS.Controllers
             if (ModelState.IsValid)
             {
                
-                foreach (var item in problem.Issue )
+                foreach (var item in db.Issue.Where(i => i.ProblemId == problem.Id).ToList())
                 {
                     if (problem.StatusGlavnogProblema == StatusGlavnogProblema.Rijesen) item.StatusProblema = StatusProblema.Riješen;
                     if (problem.StatusGlavnogProblema == StatusGlavnogProblema.Odbijen) item.StatusProblema = StatusProblema.Odbijen;
