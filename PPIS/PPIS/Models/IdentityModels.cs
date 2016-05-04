@@ -49,5 +49,7 @@ namespace PPIS.Models
         public DbSet<Certifikat> Certifikat { get; set; }
         public DbSet<ZahtjevZaPromjenom> ZahtjevZaPromjenom { get; set; }
         public DbSet<Issue>Issue { get; set; }
+
+        public System.Data.Entity.DbSet<PPIS.Models.Problem> Problems { get; set; }
     }
 }

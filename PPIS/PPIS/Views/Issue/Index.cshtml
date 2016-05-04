@@ -24,24 +24,29 @@
         @Html.DisplayNameFor(model => model.User.ImeIPrezime)
     </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.StatusProblema)
+                @Html.DisplayName("Status zahtjeva")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DatumPodnosenja)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NazivProblema)
+                @Html.DisplayName("Naziv zahtjeva")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OpisProblema)
+                @Html.DisplayName("Opis zahtjeva")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PrioritetProblema)
+                @Html.DisplayName("Prioritet zahtjeva")
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Komentar)
             </th>
-            <th></th>
+           
+        
+         <th>
+             @Html.DisplayName("Naziv problema")
+
+         </th>
         </tr>
 
     @foreach (var item in Model) {
@@ -66,6 +71,11 @@
                 @Html.DisplayFor(modelItem => item.Komentar)
             </td>
             <td>
+
+                @Html.DisplayFor(modelItem => item.Problem.Naziv)
+            </td>
+
+<td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
                 @Html.ActionLink("Details", "Details", new { id=item.ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.ID })

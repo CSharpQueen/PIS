@@ -7,3 +7,11 @@
 <div class="col-md-10">
     @Html.ActionLink("Novi issue", "Create", "Issue", null, null)
 </div>
+
+@if (User.IsInRole("Event") || User.IsInRole("ProblemManager"))
+{
+<br>
+<div class="col-md-10">
+    @Html.ActionLink("Problemi", "Index", "Problem", null, null)
+</div>
+}

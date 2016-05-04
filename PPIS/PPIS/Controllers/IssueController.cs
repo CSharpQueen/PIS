@@ -89,6 +89,7 @@ namespace PPIS.Controllers
              {
                  return HttpNotFound();
              }
+            ViewBag.Problems = db.Problems.ToList();
              return View(issue);
          }
 

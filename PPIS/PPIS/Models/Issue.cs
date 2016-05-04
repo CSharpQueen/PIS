@@ -9,12 +9,14 @@ namespace PPIS.Models
 {
     public enum StatusProblema
     {
-        Poslan, Incident, Problem, Riješen, PonovoOtvoren
+        Poslan, Incident, Problem, Riješen, PonovoOtvoren,
+        Odbijen,
+        UToku
     }
 
     public enum PrioritetProblema
     {
-        nizak, srednji,visok
+        nizak, srednji, visok
     }
     public class Issue
     {
@@ -24,7 +26,7 @@ namespace PPIS.Models
         [Display(Name = "Korisnik")]
         public ApplicationUser User { get; set; }
 
-         [Display(Name = "Status problema")]
+        [Display(Name = "Status problema")]
         public StatusProblema StatusProblema { get; set; }
 
         [Display(Name = "Datum podnosenja")]
@@ -36,17 +38,17 @@ namespace PPIS.Models
         [Display(Name = "Opis problema")]
         [DataType(DataType.Text)]
         public string OpisProblema { get; set; }
-        
-  public string IncidentId { get; set; }
+
+        public string IncidentId { get; set; }
         [ForeignKey("IncidentId")]
         public ApplicationUser Incident { get; set; }
-         [Display(Name = "Prioritet problema")]
+        [Display(Name = "Prioritet problema")]
         public PrioritetProblema PrioritetProblema { get; set; }
 
         public string EventId { get; set; }
         [ForeignKey("EventId")]
         public ApplicationUser Event { get; set; }
-        
+
 
 
         public string ProblemManagerId { get; set; }
@@ -55,6 +57,8 @@ namespace PPIS.Models
         [DataType(DataType.Text)]
         public string Komentar { get; set; }
 
+        public int? ProblemId { get; set; }
+        public virtual Problem Problem { get; set; }
 
     }
 }
