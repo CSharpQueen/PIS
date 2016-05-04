@@ -14,10 +14,10 @@ namespace PPIS.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ZahtjevZaPromjenom
-        [Authorize(Roles = "User,Incident,Event,ProblemManager")]
+      //  [Authorize(Roles = "User,Incident,Event,ProblemManager")]
         public ActionResult Index()
         {
-            return View();
+           // return View();
              List<Issue> issue = db.Issue.ToList();
 
              //if (User.IsInRole("Cab")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Cab).ToList();
@@ -30,7 +30,7 @@ namespace PPIS.Controllers
             return View(issue);
          }
 
-         // GET: ZahtjevZaPromjenom/Details/5ž
+         // GET: ZahtjevZaPromjenom/Details/5
          [Authorize(Roles = "Cab,ChangeManager,User")]
          public ActionResult Details(int? id)
          {
@@ -65,6 +65,8 @@ namespace PPIS.Controllers
              {
                  issue.UserId = db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault().Id;
                 issue.DatumPodnosenja = DateTime.Now;
+                issue.StatusProblema = StatusProblema.Poslan;
+                issue.PrioritetProblema = PrioritetProblema.nizak;
                  db.Issue.Add(issue);
                  db.SaveChanges();
                  return RedirectToAction("Index");

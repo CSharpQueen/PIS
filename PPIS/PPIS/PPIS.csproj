@@ -233,6 +233,10 @@
     <Compile Include="Migrations\201604252055431_srce.Designer.cs">
       <DependentUpon>201604252055431_srce.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604271936410_aadad.cs" />
+    <Compile Include="Migrations\201604271936410_aadad.Designer.cs">
+      <DependentUpon>201604271936410_aadad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Certifikat.cs" />
@@ -371,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604252055431_srce.resx">
       <DependentUpon>201604252055431_srce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604271936410_aadad.resx">
+      <DependentUpon>201604271936410_aadad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
