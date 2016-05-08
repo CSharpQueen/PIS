@@ -1,10 +1,19 @@
-﻿<br>
-@Html.ActionLink("Dobavljači", "Index", "Dobavljac",null,null)
-<br>
-@Html.ActionLink("Ugovori", "Index", "Ugovor", null, null)
-<br>
-@Html.ActionLink("Ponuda", "Index", "Ponuda", null, null)
-<br>
-@Html.ActionLink("Potražnja", "Index", "Potraznja", null, null)
-<br>
-@Html.ActionLink("Ocjene dobavljača", "Index", "OcjenaDobavljaca", null, null)
+﻿<br/>
+<br />
+<br />
+<br />
+<div class="center">
+    @Html.ActionLink("Dobavljači", "Index", "Dobavljac", null, new { @class = "btn btn-primary btn-large bdobavljac" })
+
+    @Html.ActionLink("Ugovori", "Index", "Ugovor", null, new { @class = "btn btn-primary btn-large bugovor" })
+
+    @Html.ActionLink("Ponuda", "Index", "Ponuda", null, new { @class = "btn btn-primary btn-large bponuda" })
+
+    @Html.ActionLink("Potražnja", "Index", "Potraznja", null, new { @class = "btn btn-primary btn-large bpotraznja" })
+
+    @Html.ActionLink("Ocjene dobavljača", "Index", "OcjenaDobavljaca", null, new { @class = "btn btn-primary btn-large bocjena" })
+</div>
+<br />
+<br />
+<br />
+<br />

@@ -22,3 +22,78 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.maroon{
+    background-color:maroon;
+}
+
+.header{
+    height: 75px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    font-weight: bold;
+}
+.footer{
+     position: fixed;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+     background-color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+       color:#999999;
+       padding-top:5px;
+       padding-left:50px;
+}
+
+.bdobavljac{
+    background: url(Images/supplier1.jpg) no-repeat;
+}
+
+.bugovor{
+     background: url(Images/ugovor.jpg) no-repeat;
+    
+}
+.bponuda{
+       background: url(Images/offer.jpg) no-repeat;
+     
+}
+
+.bpotraznja{
+      background: url(Images/potraznja.jpg) no-repeat;
+    
+}
+
+.bocjena{
+      background: url(Images/ocjena.jpg) no-repeat;
+
+
+}
+
+.bdobavljac, .bocjena, .bponuda, .bugovor, .bpotraznja {
+         height:120px;
+     width:160px;
+         color: black;
+     font-weight:bold;
+      text-transform: uppercase;
+      text-align:center;
+      padding:0px;
+}
+ 
+.bdobavljac .bocjena .bponuda .bugovor .bpotraznja a:active, a:hover{
+    color:white;
+}
+
+.center{
+    margin-left:150px;
+}
+
+.pozadnina{
+    background-color:#f5f5ef;
+       
+}
+
+.glavna{
+    background-color: #d8d8c0;
+}
+

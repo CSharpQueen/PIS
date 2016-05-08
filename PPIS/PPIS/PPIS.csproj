@@ -226,21 +226,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604251221188_gvg.cs" />
-    <Compile Include="Migrations\201604251221188_gvg.Designer.cs">
-      <DependentUpon>201604251221188_gvg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604252055431_srce.cs" />
-    <Compile Include="Migrations\201604252055431_srce.Designer.cs">
-      <DependentUpon>201604252055431_srce.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604271936410_aadad.cs" />
-    <Compile Include="Migrations\201604271936410_aadad.Designer.cs">
-      <DependentUpon>201604271936410_aadad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605041641328_problem.cs" />
-    <Compile Include="Migrations\201605041641328_problem.Designer.cs">
-      <DependentUpon>201605041641328_problem.cs</DependentUpon>
+    <Compile Include="Migrations\201605081320461_migi.cs" />
+    <Compile Include="Migrations\201605081320461_migi.Designer.cs">
+      <DependentUpon>201605081320461_migi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -261,6 +249,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\it.jpg" />
+    <Content Include="Content\Images\ocjena.jpg" />
+    <Content Include="Content\Images\offer.jpg" />
+    <Content Include="Content\Images\potraznja.jpg" />
+    <Content Include="Content\Images\supplier.jpg" />
+    <Content Include="Content\Images\ugovor.jpg" />
+    <Content Include="Content\Images\ugovor1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -382,17 +377,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604251221188_gvg.resx">
-      <DependentUpon>201604251221188_gvg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604252055431_srce.resx">
-      <DependentUpon>201604252055431_srce.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604271936410_aadad.resx">
-      <DependentUpon>201604271936410_aadad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605041641328_problem.resx">
-      <DependentUpon>201605041641328_problem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605081320461_migi.resx">
+      <DependentUpon>201605081320461_migi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
