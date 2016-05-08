@@ -31,7 +31,7 @@ namespace PPIS.Controllers
          }
 
          // GET: ZahtjevZaPromjenom/Details/5
-         [Authorize(Roles = "Cab,ChangeManager,User")]
+         [Authorize(Roles = "User,Event,Incident,ProblemManager")]
          public ActionResult Details(int? id)
          {
              if (id == null)
@@ -47,7 +47,7 @@ namespace PPIS.Controllers
          }
 
          // GET: ZahtjevZaPromjenom/Create
-         [Authorize(Roles = "User")]
+         [Authorize(Roles = "User,Event,Incident,ProblemManager")]
          public ActionResult Create()
          {
              return View();
@@ -58,7 +58,7 @@ namespace PPIS.Controllers
          // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
          [HttpPost]
          [ValidateAntiForgeryToken]
-         [Authorize(Roles = "User")]
+         [Authorize(Roles = "User,Event,Incident,ProblemManager")]
          public ActionResult Create(Issue issue)
          {
              if (ModelState.IsValid)
