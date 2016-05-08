@@ -22,7 +22,7 @@ namespace PPIS.Controllers
 
              //if (User.IsInRole("Cab")) zahtjevi = db.ZahtjevZaPromjenom.Where(z => z.StatusZahtjevaZaPromjenom == StatusZahtjevaZaPromjenom.Cab).ToList();
              //z.UserId == db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault().Id)).ToList();
-             if (User.IsInRole("User")) issue = db.Issue.Where(z => z.StatusProblema == StatusProblema.Poslan || z.StatusProblema == StatusProblema.PonovoOtvoren || z.StatusProblema == StatusProblema.Riješen).OrderByDescending(z => z.PrioritetProblema).ToList();
+             if (User.IsInRole("User")) issue = db.Issue.Where(z => z.StatusProblema == StatusProblema.Poslan || z.StatusProblema == StatusProblema.PonovoOtvoren || z.StatusProblema == StatusProblema.Riješen || z.StatusProblema == StatusProblema.Odbijen).OrderByDescending(z => z.PrioritetProblema).ToList();
              if (User.IsInRole("Incident")) issue = db.Issue.OrderBy(z => z.PrioritetProblema).ToList();
              if (User.IsInRole("Event")) issue = db.Issue.Where(z => (z.StatusProblema == StatusProblema.Incident || z.StatusProblema == StatusProblema.Riješen)).OrderByDescending(z => z.PrioritetProblema).ToList();
             if (User.IsInRole("Problem")) issue = db.Issue.Where(z => (z.StatusProblema == StatusProblema.Problem )).OrderByDescending(z => z.PrioritetProblema).ToList();
