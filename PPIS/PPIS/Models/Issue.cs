@@ -26,16 +26,16 @@ namespace PPIS.Models
         [Display(Name = "Korisnik")]
         public ApplicationUser User { get; set; }
 
-        [Display(Name = "Status problema")]
+        [Display(Name = "Status zahtjeva")]
         public StatusProblema StatusProblema { get; set; }
 
         [Display(Name = "Datum podnosenja")]
         public DateTime? DatumPodnosenja { get; set; }
 
-        [Display(Name = "Naziv problema")]
+        [Display(Name = "Naziv zahtjeva")]
         public string NazivProblema { get; set; }
 
-        [Display(Name = "Opis problema")]
+        [Display(Name = "Opis zahtjeva")]
         [DataType(DataType.Text)]
         public string OpisProblema { get; set; }
 
