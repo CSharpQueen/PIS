@@ -3,37 +3,13 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+<br />
+<h2>Detalji o zahtjevu:</h2>
 
 <div>
-    <h4>ZahtjevZaPromjenom</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Cab.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cab.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Menadzer.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Menadzer.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.User.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.Email)
-        </dd>
-
+        
         <dt>
             @Html.DisplayNameFor(model => model.StatusZahtjevaZaPromjenom)
         </dt>
@@ -125,6 +101,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Izmjena", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Nazad", "Index")
 </p>

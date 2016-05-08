@@ -1,23 +1,22 @@
-﻿<br>
+﻿<br />
+<br />
+<br />
+<br />
+<div class="center">
 
-<div class="col-md-10">
-    <br>
-    <br />
-  
-    @Html.ActionLink("Pregled zahtjeva", "Index", "Issue", null, null)
-</div>
-<br>
 
-<div class="col-md-10">
+    @Html.ActionLink("Pregled zahtjeva", "Index", "Issue", null, new { @class = "btn btn-default btn-large dugme" })
+
   
-    @Html.ActionLink("Kreiraj novi zahtjev", "Create", "Issue", null, null)
-</div>
+    @Html.ActionLink("Kreiraj novi zahtjev", "Create", "Issue", null, new { @class = "btn btn-default btn-large dugme" })
 
 @if (User.IsInRole("Event") || User.IsInRole("ProblemManager"))
 {
-<br>
-<div class="col-md-10">
    
-    @Html.ActionLink("Pregled problema", "Index", "Problem", null, null)
-</div>
+    @Html.ActionLink("Pregled problema", "Index", "Problem", null, new { @class = "btn btn-default btn-large dugme" })
 }
+</div>
+<br />
+<br />
+<br />
+<br />

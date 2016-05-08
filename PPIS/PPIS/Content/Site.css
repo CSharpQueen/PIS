@@ -80,8 +80,17 @@ textarea {
       padding:0px;
 }
  
-.bdobavljac .bocjena .bponuda .bugovor .bpotraznja a:active, a:hover{
+.bdobavljac .bocjena .bponuda .bugovor .bpotraznja .dugme a:active, a:hover{
     color:white;
+}
+.dugme{
+    height:50px;
+     width:200px;
+   color: black;
+     font-weight:bold;
+      text-transform: uppercase;
+   
+      padding-top:10px;
 }
 
 .center{
